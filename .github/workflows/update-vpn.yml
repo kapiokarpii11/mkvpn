@@ -1,0 +1,37 @@
+name: Обновление Подписки VPN 🦎
+
+# Настраиваем расписание ⏰
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Будет запускаться каждые 15 минут! ✨
+  workflow_dispatch: # Позволит тебе запускать скрипт ручками, когда захочешь 🎀
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Даем боту разрешение сохранять файлик в репозиторий 🔑
+
+    steps:
+      - name: Загружаем файлы репозитория 📂
+        uses: actions/checkout@v4
+
+      - name: Устанавливаем Python 🐍
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Устанавливаем библиотечку requests 📦
+        run: pip install requests
+
+      - name: Запускаем наш волшебный скрипт! 🪄
+        run: python main.py
+
+      - name: Сохраняем результат в GitHub 💾
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action 🤖"
+          git add sub.txt
+          # Если изменений нет, он не будет ругаться 🌸
+          git commit -m "Авто-обновление подписки: добавлены свежие ящерки 🦎✨" || echo "No changes to commit"
+          git push
