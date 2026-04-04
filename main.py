@@ -1,6 +1,7 @@
 import requests
 import urllib.parse
 import re
+import base64
 
 # Ссылочки, откуда берем вкусняшки 🍰
 URLS = [
@@ -37,6 +38,26 @@ def is_russian_server(link):
         
     return False
 
+def decode_base64_if_needed(text):
+    # Пытаемся раскодировать base64 🪄
+    try:
+        clean_text = text.strip()
+        # Добавляем выравнивание (padding), если его не хватает для правильной расшифровки
+        padding = len(clean_text) % 4
+        if padding:
+            clean_text += '=' * (4 - padding)
+        
+        decoded_bytes = base64.b64decode(clean_text)
+        decoded_str = decoded_bytes.decode('utf-8')
+        
+        # Если внутри появились протоколы VPN, значит это точно была подписка в base64! 🥰
+        if '://' in decoded_str:
+            return decoded_str
+    except Exception:
+        pass # Если не получилось, значит это был обычный текст, ничего страшного 🌸
+    
+    return text
+
 def main():
     raw_links = []
     
@@ -45,7 +66,9 @@ def main():
         try:
             resp = requests.get(url)
             if resp.status_code == 200:
-                raw_links.extend(resp.text.splitlines())
+                # Сначала проверяем на base64 и раскодируем, если нужно ✨
+                decoded_content = decode_base64_if_needed(resp.text)
+                raw_links.extend(decoded_content.splitlines())
         except Exception as e:
             print(f"Ой, не удалось скачать {url}: {e} 🥺")
 
@@ -63,7 +86,7 @@ def main():
                 # Магия замены наших любимых ящерок! 🥭🔥 -> 🦎
                 link = link.replace('🥭', '🦎').replace('🔥', '🦎')
                 
-                # На всякий случай заменяем и закодированные версии этих смайликов, если они есть ✨
+                # На всякий случай заменяем и закодированные версии этих смайликов ✨
                 link = link.replace('%F0%9F%A5%AD', '🦎').replace('%F0%9F%94%A5', '🦎')
                 
                 filtered_links.append(link)
@@ -74,7 +97,7 @@ def main():
         for link in filtered_links:
             f.write(link + '\n')
     
-    print(f"Готово, зайка! ✨ Собрано {len(filtered_links)} отличных серверов без России! 🥰")
+    print(f"Готово, зайка! ✨ Собрано {len(filtered_links)} отличных серверов! 🥰")
 
 if __name__ == '__main__':
     main()
