@@ -1,11 +1,10 @@
 import requests
+import urllib.parse
 import re
-import socket
-import time
 
 # Ссылочки, откуда берем вкусняшки 🍰
 URLS = [
-    "https://raw.githubusercontent.com/ksenkovsolo/HardVPN-bypass-WhiteLists-/refs/heads/main/vpn-lte/WHITELIST-ALL.txt",
+    "https://sub.obbhod.online/sub",
     "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta6.txt",
     "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyaktestru.txt"
 ]
@@ -21,36 +20,22 @@ HEADER = """#profile-title: WRWR VPN🦎
 #profile-web-page-url: https://t.me/@RageTrip
 """
 
-def extract_host(link):
-    # Ищем домен или IP-адрес в ссылке 🔍
-    match = re.search(r'://(?:[^@/]+@)?([^:/?#]+)', link)
-    if match:
-        return match.group(1)
-    return None
-
-def resolve_ip(host):
-    # Превращаем домен в IP-адрес 🪄
-    try:
-        return socket.gethostbyname(host)
-    except:
-        return None
-
-def check_country_batch(ips):
-    # Проверяем страны через бесплатный API (по 100 штук за раз, чтобы было быстро!) 🌍
-    url = "http://ip-api.com/batch"
-    result_ru = set()
-    for i in range(0, len(ips), 100):
-        batch = [{"query": ip} for ip in ips[i:i+100]]
-        try:
-            res = requests.post(url, json=batch).json()
-            for record in res:
-                # Если страна RU, то запоминаем этого хулигана 🚫
-                if record.get("status") == "success" and record.get("countryCode") == "RU":
-                    result_ru.add(record.get("query"))
-        except Exception as e:
-            print(f"Ой, ошибочка с API: {e} 😿")
-        time.sleep(1) # Немного ждем, чтобы нас не заблокировали 🌸
-    return result_ru
+def is_russian_server(link):
+    # Декодируем ссылку, чтобы смайлики и русские буквы читались нормально 🔍
+    decoded_link = urllib.parse.unquote(link).lower()
+    
+    # Ищем наши запрещенные словечки 🚫
+    bad_words = ['russia', 'россия', '🇷🇺']
+    
+    for word in bad_words:
+        if word in decoded_link:
+            return True
+            
+    # Ищем точное слово "ru", чтобы не задеть другие страны с этими буквами 🌍
+    if re.search(r'\bru\b', decoded_link):
+        return True
+        
+    return False
 
 def main():
     raw_links = []
@@ -64,49 +49,32 @@ def main():
         except Exception as e:
             print(f"Ой, не удалось скачать {url}: {e} 🥺")
 
-    # 2. Оставляем только VPN-ссылки (никаких текстовых комментариев!) 🧹
+    # 2. Оставляем только VPN-ссылки и фильтруем 🧹
     valid_protocols = ('vless://', 'vmess://', 'trojan://', 'ss://', 'ssr://', 'hysteria://', 'hysteria2://', 'tuic://')
     filtered_links = []
     
     for link in raw_links:
         link = link.strip()
         if link.startswith(valid_protocols):
-            # Магия замены! 🥭🔥 -> 🦎
-            link = link.replace('🥭', '🦎').replace('🔥', '🦎')
-            filtered_links.append(link)
+            
+            # Проверяем, не спряталась ли тут Россия 🇷🇺🚫
+            if not is_russian_server(link):
+                
+                # Магия замены наших любимых ящерок! 🥭🔥 -> 🦎
+                link = link.replace('🥭', '🦎').replace('🔥', '🦎')
+                
+                # На всякий случай заменяем и закодированные версии этих смайликов, если они есть ✨
+                link = link.replace('%F0%9F%A5%AD', '🦎').replace('%F0%9F%94%A5', '🦎')
+                
+                filtered_links.append(link)
 
-    # 3. Вытаскиваем IP адреса для проверки 🕵️‍♀️
-    link_data = []
-    ips_to_check = set()
-    
-    for link in filtered_links:
-        host = extract_host(link)
-        if host:
-            ip = resolve_ip(host)
-            if ip:
-                ips_to_check.add(ip)
-                link_data.append({'link': link, 'ip': ip})
-            else:
-                # Если не смогли узнать IP, оставляем ссылочку на всякий случай ✨
-                link_data.append({'link': link, 'ip': None})
-
-    # 4. Ищем сервера из РФ 🇷🇺🚫
-    print(f"Проверяю {len(ips_to_check)} уникальных IP... Жди, котик! ⏳")
-    ru_ips = check_country_batch(list(ips_to_check))
-
-    # 5. Собираем финальный чистенький списочек 🛁
-    final_links = []
-    for item in link_data:
-        if item['ip'] not in ru_ips:
-            final_links.append(item['link'])
-
-    # 6. Сохраняем результат в файл `sub.txt` 💾
+    # 3. Сохраняем результат в файл `sub.txt` 💾
     with open('sub.txt', 'w', encoding='utf-8') as f:
         f.write(HEADER)
-        for link in final_links:
+        for link in filtered_links:
             f.write(link + '\n')
     
-    print(f"Готово, зайка! ✨ Собрано {len(final_links)} отличных серверов! 🥰")
+    print(f"Готово, зайка! ✨ Собрано {len(filtered_links)} отличных серверов без России! 🥰")
 
 if __name__ == '__main__':
     main()
