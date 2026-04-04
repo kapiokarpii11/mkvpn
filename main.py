@@ -7,6 +7,7 @@ import base64
 URLS = [
     "https://sub.obbhod.online/sub",
     "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyakbeta6.txt",
+    "https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/selected.txt",
     "https://raw.githubusercontent.com/Maskkost93/kizyak-vpn-4.0/refs/heads/main/kizyaktestru.txt"
 ]
 
