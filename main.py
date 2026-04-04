@@ -18,8 +18,8 @@ HEADER = """#profile-title: WRWR VPN🦎
 #profile-serverDescription: yeehaw
 #profile-update-interval: 3
 #subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=0;
-#support-url: https://t.me/@RageTrip
-#profile-web-page-url: https://t.me/@RageTrip
+#support-url: https://t.me/RageTrip
+#profile-web-page-url: https://t.me/RageTrip
 """
 
 def is_russian_server(link):
