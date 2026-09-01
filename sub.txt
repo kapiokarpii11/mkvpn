@@ -6,8 +6,16 @@
 #subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=0;
 #support-url: https://t.me/RageTrip
 #profile-web-page-url: https://t.me/RageTrip
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast100.screw.page:443?sni=fast100.screw.page&fm=%7B#%F0%9F%87%AB%F0%9F%87%AE%20Финляндия%20[🏳️LTE]%20|%20🦎🔧
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast_s100.screw.page:443?sni=fast_s100.screw.page&fm=%7B#%F0%9F%87%AB%F0%9F%87%AE%20Финляндия%20[🏳️LTE]%20|%20🦎🔧
+vless://2f39df59-0ec9-4b92-b6f7-10f746942c70@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=chrome#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://2f39df59-0ec9-4b92-b6f7-10f746942c70@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=edge#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://2f39df59-0ec9-4b92-b6f7-10f746942c70@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=firefox#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://2f39df59-0ec9-4b92-b6f7-10f746942c70@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=qq#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://2f39df59-0ec9-4b92-b6f7-10f746942c70@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=safari#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://5f922903-69b5-4d99-924d-52ca6337741e@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=android#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://5f922903-69b5-4d99-924d-52ca6337741e@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=firefox#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://5f922903-69b5-4d99-924d-52ca6337741e@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=ios#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://5f922903-69b5-4d99-924d-52ca6337741e@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=qq#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
+vless://5f922903-69b5-4d99-924d-52ca6337741e@46.8.208.29:443?type=grpc&security=reality&pbk=HHZwsut0m8Z4tTCbU0QdnbyfQMQfk8XuEbBO0wFObis&sid=7765b2a4cef1033e&sni=cdn.okko.tv&serviceName=UpdateService&fp=safari#%F0%9F%87%A9%F0%9F%87%AA%20Германия%20%7C%20[🏳️LTE]%20|%20🦎🔧
 vless://39e282e0-5ae4-4ff4-8848-4b9346505c78@217.16.21.98:27472?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.samsung.com&fp=chrome&pbk=tfBYj32NRb7oc8lmVjr0nlote_rqpe_vd367HlcwxVs&sid=b0&type=tcp&headerType=none#3.%20%F0%9F%87%A6%F0%9F%87%B9%20VLESS%20%7C%20SNI%3A%20www.samsung.com%20%7C%20CIDR%3A%20%3F%20%7C%20TG%3A%20%40wlrustg
 vless://aef9ff3f-9c4a-4c42-a0dd-e82709b4c36f@91.219.227.200:8444?encryption=none&type=tcp&security=reality&fp=chrome&sni=eh.vk.com&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c#27.%20%F0%9F%87%B5%F0%9F%87%B1%20VLESS%20%7C%20SNI%3A%20eh.vk.com%20%7C%20CIDR%3A%20%3F%20%7C%20TG%3A%20%40wlrustg
 vless://aef9ff3f-9c4a-4c42-a0dd-e82709b4c36f@91.219.227.189:8181?encryption=none&security=reality&sni=eh.vk.com&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c&type=tcp&headerType=none#47.%20VLESS%20%7C%20SNI%3A%20eh.vk.com%20%7C%20CIDR%3A%20%3F%20%7C%20TG%3A%20%40wlrustg
@@ -26,12 +34,3 @@ vless://aef9ff3f-9c4a-4c42-a0dd-e82709b4c36f@95.163.211.240:8083?encryption=none
 vless://aef9ff3f-9c4a-4c42-a0dd-e82709b4c36f@91.219.227.200:8444?flow=&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&security=reality&sid=7dbf7d3233971d5c&sni=eh.vk.com&type=tcp#232.%20VLESS%20%7C%20SNI%3A%20eh.vk.com%20%7C%20CIDR%3A%20%3F%20%7C%20TG%3A%20%40wlrustg
 vless://aef9ff3f-9c4a-4c42-a0dd-e82709b4c36f@95.163.211.237:7443?encryption=none&type=tcp&security=reality&fp=chrome&sni=eh.vk.com&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c#243.%20%F0%9F%87%B9%F0%9F%87%B7%20VLESS%20%7C%20SNI%3A%20eh.vk.com%20%7C%20CIDR%3A%20VK%20%7C%20TG%3A%20%40wlrustg
 vless://aef9ff3f-9c4a-4c42-a0dd-e82709b4c36f@95.163.211.237:7443?encryption=none&type=tcp&security=reality&sni=eh.vk.com&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&sid=7dbf7d3233971d5c#249.%20%F0%9F%87%B9%F0%9F%87%B7%20VLESS%20%7C%20SNI%3A%20eh.vk.com%20%7C%20CIDR%3A%20VK%20%7C%20TG%3A%20%40wlrustg
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast100.screw.page:443?sni=fast100.screw.page&fm=%7B&_t=3cc283b6#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast93.screw.page:443?fm=%7B&sni=fast93.screw.page#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast93.screw.page:443?fm=%7B&sni=fast93.screw.page#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast93.screw.page:443?fm=%7B&sni=fast93.screw.page&_t=3961af0c#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast_s100.screw.page:443?fm=%7B&sni=fast_s100.screw.page&burmalda=a694f572#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast_s100.screw.page:443?sni=fast_s100.screw.page&fm=%7B#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast_s100.screw.page:443?sni=fast_s100.screw.page&fm=%7B&descriptions=люби_себя5933a5#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast_s100.screw.page:443?sni=fast_s100.screw.page&fm=%7B&nonce=kwDKfz4N#🇺🇸%20США%20|%20🦎🦎
-hysteria2://5b88763e-e1a1-43a2-8556-bc7963ce8739@fast_s100.screw.page:443?sni=fast_s100.screw.page&fm=%7B&_t=404250c6#🇺🇸%20США%20|%20🦎🦎
